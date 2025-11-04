@@ -7,25 +7,40 @@ import heroImage from "@/assets/hero-sports.jpg";
 
 const Home = () => {
   const highlights = [
-    { title: "Weekend Futsal Tournament", location: "Central Sports Arena", date: "Sat, 10 AM", participants: 24 },
-    { title: "Morning Run Community", location: "City Park", date: "Daily, 6 AM", participants: 156 },
-    { title: "Yoga Session", location: "Green Valley", date: "Sun, 8 AM", participants: 45 },
+    {
+      title: "Turnamen Futsal Akhir Pekan",
+      location: "Central Sports Arena",
+      date: "Sabtu, 10 Pagi",
+      participants: 24,
+    },
+    {
+      title: "Komunitas Lari Pagi",
+      location: "City Park",
+      date: "Setiap Hari, 6 Pagi",
+      participants: 156,
+    },
+    {
+      title: "Sesi Yoga Santai",
+      location: "Green Valley",
+      date: "Minggu, 8 Pagi",
+      participants: 45,
+    },
   ];
 
   const testimonials = [
     {
       name: "Alex Johnson",
-      text: "Found amazing workout partners here! The community is so supportive and active.",
+      text: "Menemukan banyak teman olahraga di sini! Komunitasnya aktif dan saling mendukung.",
       rating: 5,
     },
     {
       name: "Sarah Williams",
-      text: "Booking fields has never been easier. Great platform with fair pricing!",
+      text: "Sewa lapangan jadi super mudah. Platformnya bagus dan harganya juga bersahabat!",
       rating: 5,
     },
     {
       name: "Michael Chen",
-      text: "Joined a basketball community and made lifelong friends. Highly recommend!",
+      text: "Ikut komunitas basket dan dapat teman baru seumur hidup. Sangat direkomendasikan!",
       rating: 5,
     },
   ];
@@ -38,24 +53,30 @@ const Home = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                Start Your <span className="text-primary">Active Journey</span> Today
+                Mulai <span className="text-primary">Perjalanan Aktifmu</span>{" "}
+                Hari Ini
               </h1>
               <p className="text-lg text-muted-foreground mb-8">
-                Find exercise partners, rent sports fields, join vibrant communities, and discover exciting events. All in one place.
+                Temukan partner olahraga, sewa lapangan, bergabung dengan
+                komunitas, dan ikuti berbagai event menarik — semuanya dalam
+                satu tempat.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="gradient-primary shadow-green text-lg px-8">
-                  Start Exercising
+                <Button
+                  size="lg"
+                  className="gradient-primary shadow-green text-lg px-8"
+                >
+                  Mulai Olahraga
                 </Button>
                 <Button size="lg" variant="outline">
-                  Learn More
+                  Pelajari Lebih Lanjut
                 </Button>
               </div>
             </div>
             <div className="animate-scale-in">
               <img
                 src={heroImage}
-                alt="People exercising together"
+                alt="Orang berolahraga bersama"
                 className="rounded-2xl shadow-xl w-full"
               />
             </div>
@@ -72,8 +93,10 @@ const Home = () => {
                 <div className="flex items-center gap-3 p-4 rounded-lg bg-accent/50 hover:bg-primary/10 transition-smooth cursor-pointer">
                   <Users className="w-6 h-6 text-primary" />
                   <div>
-                    <h3 className="font-semibold">Find Partner</h3>
-                    <p className="text-sm text-muted-foreground">Connect with athletes</p>
+                    <h3 className="font-semibold">Cari Partner</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Temukan teman olahraga
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -81,8 +104,10 @@ const Home = () => {
                 <div className="flex items-center gap-3 p-4 rounded-lg bg-accent/50 hover:bg-primary/10 transition-smooth cursor-pointer">
                   <MapPin className="w-6 h-6 text-primary" />
                   <div>
-                    <h3 className="font-semibold">Rent Field</h3>
-                    <p className="text-sm text-muted-foreground">Book sports venues</p>
+                    <h3 className="font-semibold">Sewa Lapangan</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Pesan tempat olahraga
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -90,8 +115,10 @@ const Home = () => {
                 <div className="flex items-center gap-3 p-4 rounded-lg bg-accent/50 hover:bg-primary/10 transition-smooth cursor-pointer">
                   <Calendar className="w-6 h-6 text-primary" />
                   <div>
-                    <h3 className="font-semibold">Join Community</h3>
-                    <p className="text-sm text-muted-foreground">Find your tribe</p>
+                    <h3 className="font-semibold">Gabung Komunitas</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Temukan kelompokmu
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -103,17 +130,24 @@ const Home = () => {
       {/* Weekly Highlights */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">This Week's Highlights</h2>
-          <p className="text-muted-foreground text-lg">Featured events and communities you shouldn't miss</p>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            Sorotan Minggu Ini
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Event dan komunitas menarik yang tidak boleh kamu lewatkan
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {highlights.map((item, index) => (
-            <Card key={index} className="hover:shadow-lg transition-smooth cursor-pointer group">
+            <Card
+              key={index}
+              className="hover:shadow-lg transition-smooth cursor-pointer group"
+            >
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <Trophy className="w-8 h-8 text-primary" />
                   <span className="text-sm bg-accent text-accent-foreground px-3 py-1 rounded-full font-medium">
-                    {item.participants} members
+                    {item.participants} peserta
                   </span>
                 </div>
                 <h3 className="font-semibold text-xl mb-2 group-hover:text-primary transition-smooth">
@@ -130,7 +164,7 @@ const Home = () => {
                   </div>
                 </div>
                 <Button className="w-full mt-4" variant="outline">
-                  View Details
+                  Lihat Detail
                 </Button>
               </CardContent>
             </Card>
@@ -142,8 +176,12 @@ const Home = () => {
       <section className="bg-secondary/30 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">What Our Members Say</h2>
-            <p className="text-muted-foreground text-lg">Join thousands of satisfied athletes and sports enthusiasts</p>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Apa Kata Anggota Kami
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Bergabunglah bersama ribuan atlet dan pecinta olahraga yang puas
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
@@ -151,10 +189,15 @@ const Home = () => {
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-primary text-primary"
+                      />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+                  <p className="text-muted-foreground mb-4 italic">
+                    "{testimonial.text}"
+                  </p>
                   <p className="font-semibold">{testimonial.name}</p>
                 </CardContent>
               </Card>
@@ -166,12 +209,18 @@ const Home = () => {
       {/* Final CTA */}
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">Ready to Get Active?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            Siap Jadi Lebih Aktif?
+          </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Join our community today and start your journey towards a healthier, more active lifestyle.
+            Bergabunglah dengan komunitas kami hari ini dan mulai perjalanan
+            menuju gaya hidup yang lebih sehat dan aktif.
           </p>
-          <Button size="lg" className="gradient-primary shadow-green text-lg px-12">
-            Join for Free
+          <Button
+            size="lg"
+            className="gradient-primary shadow-green text-lg px-12"
+          >
+            Daftar Gratis
           </Button>
         </div>
       </section>

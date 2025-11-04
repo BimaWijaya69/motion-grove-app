@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Dumbbell } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +26,17 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 font-bold text-xl text-primary hover:opacity-80 transition-smooth">
-            <Dumbbell className="w-6 h-6" />
-            <span>SportConnect</span>
+          <Link
+            to="/"
+            className="flex items-center gap-2 font-bold text-xl text-primary hover:opacity-80 transition-smooth"
+          >
+            <img
+              src={logo}
+              alt="GoRaga Logo"
+              className="w-16 h-20 object-contain"
+            />
+
+            <span>GoRaga!</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,7 +46,9 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-medium transition-smooth hover:text-primary ${
-                  isActive(link.path) ? "text-primary font-semibold" : "text-foreground/80"
+                  isActive(link.path)
+                    ? "text-primary font-semibold"
+                    : "text-foreground/80"
                 }`}
               >
                 {link.label}

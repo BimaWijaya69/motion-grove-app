@@ -6,23 +6,27 @@ const About = () => {
   const values = [
     {
       icon: Heart,
-      title: "Community First",
-      description: "We believe in building strong, supportive communities around sports and wellness.",
+      title: "Utamakan Komunitas",
+      description:
+        "Kami percaya pada pembangunan komunitas olahraga dan kebugaran yang kuat dan saling mendukung.",
     },
     {
       icon: Target,
-      title: "Excellence",
-      description: "We strive for excellence in every feature and interaction on our platform.",
+      title: "Keunggulan",
+      description:
+        "Kami berupaya menghadirkan kualitas terbaik di setiap fitur dan interaksi di platform kami.",
     },
     {
       icon: Users,
-      title: "Inclusivity",
-      description: "Everyone deserves access to sports and fitness, regardless of skill level.",
+      title: "Inklusif",
+      description:
+        "Setiap orang berhak mengakses olahraga dan kebugaran, apa pun tingkat kemampuannya.",
     },
     {
       icon: Zap,
-      title: "Innovation",
-      description: "We continuously improve and innovate to serve our community better.",
+      title: "Inovasi",
+      description:
+        "Kami terus berbenah dan berinovasi untuk melayani komunitas dengan lebih baik.",
     },
   ];
 
@@ -47,10 +51,13 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-6">About SportConnect</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            Tentang GoRaga!
+          </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            We're on a mission to make sports and fitness accessible to everyone by connecting people,
-            venues, and communities through technology.
+            Misi kami adalah menjadikan olahraga dan kebugaran dapat diakses
+            semua orang dengan menghubungkan individu, venue, dan komunitas
+            melalui teknologi.
           </p>
         </div>
 
@@ -58,16 +65,18 @@ const About = () => {
         <Card className="mb-16 shadow-lg border-primary/20">
           <CardContent className="p-12">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-6">Misi Kami</h2>
               <p className="text-muted-foreground text-lg mb-6">
-                SportConnect was founded in 2023 with a simple yet powerful vision: to break down barriers
-                to physical activity and create a thriving ecosystem where everyone can find their perfect
-                exercise partner, venue, or community.
+                GoRaga! direncanakan pada 2025 dengan visi sederhana namun kuat:
+                meruntuhkan hambatan untuk beraktivitas fisik dan membangun
+                ekosistem yang hidup, tempat setiap orang dapat menemukan
+                partner olahraga, venue, atau komunitas yang tepat.
               </p>
               <p className="text-muted-foreground text-lg">
-                We believe that staying active should be fun, social, and accessible. Whether you're a
-                seasoned athlete or just starting your fitness journey, SportConnect is here to support
-                you every step of the way.
+                Kami meyakini bahwa aktivitas fisik harus terasa menyenangkan,
+                sosial, dan mudah dijangkau. Baik kamu atlet berpengalaman
+                maupun baru memulai perjalanan kebugaran, GoRaga! hadir untuk
+                mendukungmu di setiap langkah.
               </p>
             </div>
           </CardContent>
@@ -75,18 +84,27 @@ const About = () => {
 
         {/* Values Grid */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Nilai-Nilai Kami
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <Card key={index} className="hover:shadow-lg transition-smooth text-center">
+                <Card
+                  key={index}
+                  className="hover:shadow-lg transition-smooth text-center"
+                >
                   <CardContent className="p-6">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-xl mb-2">{value.title}</h3>
-                    <p className="text-muted-foreground text-sm">{value.description}</p>
+                    <h3 className="font-semibold text-xl mb-2">
+                      {value.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               );
@@ -96,7 +114,9 @@ const About = () => {
 
         {/* Team Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Kenali Tim Kami
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
               <Card key={index} className="hover:shadow-lg transition-smooth">
@@ -114,7 +134,9 @@ const About = () => {
 
         {/* Partners Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Trusted Partners</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Mitra Tepercaya Kami
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {partners.map((partner, index) => (
               <Card key={index} className="hover:shadow-lg transition-smooth">
@@ -129,13 +151,16 @@ const About = () => {
         {/* CTA Section */}
         <Card className="bg-accent/30 border-primary/20 shadow-lg">
           <CardContent className="p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Want to Partner With Us?</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Ingin Menjadi Mitra Kami?
+            </h2>
             <p className="text-muted-foreground text-lg mb-6 max-w-2xl mx-auto">
-              We're always looking for venues, trainers, and organizations to join our growing network.
-              Let's work together to promote active lifestyles.
+              Kami selalu membuka kolaborasi dengan venue, pelatih, dan
+              organisasi untuk bergabung dalam jaringan yang terus berkembang.
+              Ayo bekerja sama mempromosikan gaya hidup aktif.
             </p>
             <Button size="lg" className="gradient-primary shadow-green">
-              Become a Partner
+              Jadi Mitra
             </Button>
           </CardContent>
         </Card>
